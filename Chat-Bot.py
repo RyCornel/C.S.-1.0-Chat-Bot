@@ -8,9 +8,9 @@ def get_bot_response(user_response):
     happy_list = ["Happy", "Good", "Great", "Awesome", "Amazing"]
     sad_list = ["Sad", "Down", "Not great", "Not good", "Not well", "Upset"]
 
-    for user_response in happy_list:
+    if user_response in happy_list:
         return print(random.choice(chat_bot_response_happy))
-    for user_response in sad_list:
+    elif user_response in sad_list:
         return print(random.choice(chat_bot_response_sad))
     else:
         return print("I hope your day imporves even more")
@@ -30,3 +30,9 @@ def get_bot_response(user_response):
 
         bot_response = get_bot_response(user_response)
         print(bot_response)
+
+
+get_bot_response("Not good")
+get_bot_response("Great")
+get_bot_response("Awesome")
+get_bot_response("IDK")
